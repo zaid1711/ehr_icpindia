@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "ehr_icpindia_backend": {
+      "candid": "src/ehr_icpindia_backend/ehr_icpindia_backend.did",
+      "package": "ehr_icpindia_backend",
+      "type": "rust"
+    },
+    "ehr_icpindia_frontend": {
+      "dependencies": [
+        "ehr_icpindia_backend"
+      ],
+      "source": [
+        "src/ehr_icpindia_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "ehr_icpindia_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/ehr_icpindia_backend"
+]
+resolver = "2"
