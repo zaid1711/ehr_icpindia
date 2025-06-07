@@ -1,0 +1,16 @@
+type MedicalRecord = record {
+  name: text;
+  dob: text;
+  gender: text;
+  blood_group: text;
+  contact: text;
+  allergies: vec text;
+  chronic_conditions: vec text;
+  medications: vec text;
+  visits: vec text;
+};
+
+service : {
+  get_record: () -> (opt MedicalRecord) query;
+  set_record: (MedicalRecord) -> ();
+};

@@ -1,27 +1,27 @@
 {
+  "version": 1,
+  "dfx": "0.17.0",
   "canisters": {
     "ehr_icpindia_backend": {
-      "candid": "src/ehr_icpindia_backend/ehr_icpindia_backend.did",
-      "package": "ehr_icpindia_backend",
-      "type": "rust"
+      "type": "rust",
+      "main": "src/ehr_icpindia_backend/src/lib.rs",
+      "candid": "src/ehr_icpindia_backend/src/ehr_icpindia_backend.did",
+      "package": "ehr_icpindia_backend"
     },
     "ehr_icpindia_frontend": {
-      "dependencies": [
-        "ehr_icpindia_backend"
-      ],
-      "source": [
-        "src/ehr_icpindia_frontend/dist"
-      ],
       "type": "assets",
-      "workspace": "ehr_icpindia_frontend"
+      "source": ["src/ehr_icpindia_frontend/dist"]
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
     }
   },
   "defaults": {
     "build": {
-      "args": "",
       "packtool": ""
     }
-  },
-  "output_env_file": ".env",
-  "version": 1
+  }
 }
