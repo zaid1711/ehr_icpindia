@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ehr_icpindia_backend } from '../../../../declarations/ehr_icpindia_backend';
+import { ehr_icpindia_backend } from '../../declarations/ehr_icpindia_backend';
 
 function App() {
   const [form, setForm] = useState({
